@@ -23,7 +23,7 @@ async function showMsg() {
     const delay = parseInt(delayInput.value);
 
     // Clear previous output
-    outputDiv.innerHTML = "⏳ Waiting...";
+    outputDiv.innerHTML = "Waiting...";
 
     // Async function to wait
     await new Promise(resolve => setTimeout(resolve, delay));
@@ -36,4 +36,4 @@ async function showMsg() {
     delayInput.value = '';
 }
 
-document.getElementById("button").addEventListener("click", showMsg);
+document.getElementById("btn").addEventListener("click", showMsg);
