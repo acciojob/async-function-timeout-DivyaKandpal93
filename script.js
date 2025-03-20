@@ -9,12 +9,16 @@ async function showMsg() {
             //Validate Input
             if(!textInput.value){
                 outputDiv.innerHTML = "Please Enter Text Input";
-                return;
+                textInput.value = '';
+        delayInput.value = '';
+				return;
             }
 
-            if(!delayInput.value || delayInput.value <0){
+            if(!delayInput.value|| isNaN(delayInput.value) || delayInput.value <0){
                 outputDiv.innerHTML = "Please enter a valid delay(ms)";
-                return;
+               textInput.value = '';
+        delayInput.value = '';
+				return;
             }
             //Convert delay to a valid input
             const delay = parseInt(delayInput.value);
@@ -27,6 +31,8 @@ async function showMsg() {
 
             //Display the msg after delay
             outputDiv.innerHTML = `${textInput.value}`;
+	textInput.value = '';
+        delayInput.value = '';
 
         }
         document.getElementById("button").addEventListener("click", showMsg);
