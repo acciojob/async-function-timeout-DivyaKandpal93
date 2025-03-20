@@ -7,11 +7,12 @@
 
   <body>
     <!-- the entire body must be written by student -->
-    <label for="Text">Enter Message:</label>
-    <input type="text" id="text" />
-    <label for="delay">Delay(in ms):</label>
-    <input type="number" id="delay" />
-    <button id="btn">Submit</button>
+    <form onsubmit="return false">
+      <input type="text" id="text" placeholder="Text" />
+      <input type="number" id="delay" placeholder="Delay" />
+      <button type="btn" id="button">Submit</button>
+    </form>
+
     <div id="output"></div>
 
     <script type="text/javascript" src="./script.js"></script>
