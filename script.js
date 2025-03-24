@@ -31,9 +31,9 @@ async function showMsg() {
     // Display the msg after delay
     outputDiv.innerHTML = `${textInput.value}`;
 
-    // Clear input fields
-    textInput.value = '';
-    delayInput.value = '';
+    // // Clear input fields
+    // textInput.value = '';
+    // delayInput.value = '';
 }
 
 document.getElementById("btn").addEventListener("click", showMsg);
