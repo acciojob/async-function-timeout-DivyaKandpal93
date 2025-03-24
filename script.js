@@ -36,4 +36,4 @@ async function showMsg() {
     delayInput.value = '';
 }
 
-document.getElementById("button").addEventListener("click", showMsg);
+document.getElementById("btn").addEventListener("click", showMsg);
